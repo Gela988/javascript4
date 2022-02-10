@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+}
+.center{
+    margin-left: 35%;
+}
+input{
+    width: 300px;
+    height: 40px;
+}
+.ul-list li {
+    font-style: none;
+}

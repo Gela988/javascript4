@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url(../javascript4/background\ \(2\).jpg);
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-btn {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: red;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  } 
+   li {
+    list-style: none;
+  }
+  a{
+    color: white;
+    text-decoration: none; 
+    font-size: 20px;
+  }
+  .navbar{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+  .nav-branding{
+    margin-left: 50px;
+    font-size: 30px;
+    color: red;
+  }
+  .nav-link{ 
+    transform: 0.7s ease;
+  }
+ .nav-link:hover{
+    color:red;
+  }
+ @media(max-width: 800px){
+    .menu-btn{
+        display: flex;
+    }
+    .nav-menu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #311200;
+        transition: top 1s ease;
+        display: none;
+    }
+    .nav-menu .nav-item .active{
+        position: fixed;
+        left: -100%; 
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: brown; 
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;  
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .na-menu .active{
+        left: 0;
+    }
+    .active{
+        display: block;
+    }
+    
+
+}
